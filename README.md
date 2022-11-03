@@ -1,3 +1,39 @@
+Modifications:
+1. Archive: Examples/Stereo/KITTI00-02.yaml:
+
+   - ```Viewer.ViewpointY: -100``` -->  ```Viewer.ViewpointY: -100.0```
+   
+        After this change getting the following error: 
+        
+          SLAM settings: -Camera 1 parameters (Pinhole): [ 718.856 718.856 607.193 185.216 ] Segmentation fault (core dumped)
+
+2. Created new archive based on ```KITTI00-02.yaml``` following solution from this [link](https://github.com/UZ-SLAMLab/ORB_SLAM3/issues/3):
+    
+    -  Changed:
+    
+            Camera.type: "Rectified" -->  Camera.type: "PinHole"
+    
+    -  Added:
+             
+             
+             Camera2.fx: 718.856
+             Camera2.fy: 718.856
+             Camera2.cx: 607.1928
+             Camera2.cy: 185.2157
+            
+    - Added:
+    
+             Stereo.T_c1_c2: !!opencv-matrix
+                             rows: 3
+                             cols: 4
+                             dt: f
+                             data: [4.276802385584e-04, -9.999672484946e-01, -8.084491683471e-03, -1.198459927713e-02,
+                                   -7.210626507497e-03, 8.081198471645e-03, -9.999413164504e-01, -5.403984729748e-02,
+                                   9.999738645903e-01, 4.859485810390e-04, -7.206933692422e-03, -2.921968648686e-01]
+            
+           
+Solution found in this [link](https://github.com/raulmur/ORB_SLAM2/issues/778)
+***
 # ORB-SLAM3
 
 ### V1.0, December 22th, 2021
