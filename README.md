@@ -32,7 +32,6 @@ Modifications:
                                    9.999738645903e-01, 4.859485810390e-04, -7.206933692422e-03, -2.921968648686e-01]
             
            
-Solution found in this [link](https://github.com/raulmur/ORB_SLAM2/issues/778)
 ***
 # ORB-SLAM3
 
