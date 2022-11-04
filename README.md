@@ -1,5 +1,5 @@
 Modifications:
-1. Archive: Examples/Stereo/KITTI00-02.yaml:
+1. File Examples/Stereo/KITTI00-02.yaml:
 
    - ```Viewer.ViewpointY: -100``` -->  ```Viewer.ViewpointY: -100.0```
    
@@ -31,7 +31,12 @@ Modifications:
                                    -7.210626507497e-03, 8.081198471645e-03, -9.999413164504e-01, -5.403984729748e-02,
                                    9.999738645903e-01, 4.859485810390e-04, -7.206933692422e-03, -2.921968648686e-01]
             
-           
+3. File include/System.h:
+
+     - Removed the space:
+
+            #include <unistd.h> -->  #include<unistd.h>
+
 ***
 # ORB-SLAM3
 
